@@ -4,3 +4,4 @@
 node_modules
 dist
 .cache
+echo .DS_Store >> .gitignore
