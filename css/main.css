@@ -1,0 +1,506 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+body {
+  font-family: 'Poppins', Helvetica, sans-serif;
+}
+
+.header-container {
+  background-color: #fff;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.15);
+  top: 0;
+  z-index: 10;
+}
+
+.logo-container {
+  max-width: 72em;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  padding: 0.5em;
+}
+
+.logo-text {
+  padding-left: 0.5em;
+  font-size: 1.4em;
+  font-weight: bold;
+  line-height: normal;
+}
+
+.logo-text p {
+  font-size: 0.6em;
+  font-weight: lighter;
+  line-height: normal;
+  margin: 0;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-space {
+  gap: 2em;
+}
+
+.flex-justify-between {
+  justify-content: space-between;
+}
+
+.nav-links a {
+  font-size: 1em;
+  color: #222;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+}
+
+.nav-links a:hover {
+  color: #fff;
+  background-color: #555;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.8em 0.4em;
+  border-radius: 0.3em;
+}
+
+.nav-links a:active {
+  color: #fff;
+  background-color: #555;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.8em 0.4em;
+  border-radius: 0.3em;
+}
+
+.main-container {
+  max-width: 72em;
+  margin: auto;
+}
+
+.hero-container {
+  position: relative;
+}
+
+.hero-container img {
+  margin: auto;
+  width: 100%;
+  max-height: 28em;
+  object-fit: cover;
+  object-position: center;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+.centered a {
+  font-size: 1.4em;
+  color: #222;
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  background-color: #b3d4fc;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.centered a:hover {
+  font-size: 1.4em;
+  color: #222;
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  background-color: #65d7d1;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.welcome-container {
+  padding: 1em;
+  background: rgba(135, 206, 235, 0.2);
+}
+
+.welcome-container h1 {
+  text-align: center;
+}
+
+.service-columns {
+  padding: 1em;
+
+  --stripe: rgba(187, 222, 177, 0.1);
+  --bg: #fff;
+  background: linear-gradient(135deg, var(--bg) 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, var(--bg) 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, var(--bg) 25%, transparent 25%),
+    linear-gradient(45deg, var(--bg) 25%, transparent 25%);
+  background-size: 50px 50px;
+  background-color: var(--stripe);
+}
+
+.service-columns h3 {
+  text-align: center;
+  font-size: 2em;
+}
+
+.service-columns h4 {
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.service-columns a {
+  color:darkslategray;
+  text-decoration: none;
+}
+
+.service-columns a:hover {
+  color:darkslategray;
+  background-color: #ccc;
+  padding: 0.5em;
+  border-radius: 0.3em;
+  text-decoration: underline;
+}
+
+.service-column h4 {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.service-column p {
+  text-align: justify;
+}
+
+.service-column p:nth-child(3) {
+  text-align: center;
+  font-size: 1.3em;
+  padding: 0.4em 0em;
+  font-weight: 600;
+  background-color: #83C471;
+  border-radius: 0.3em;
+}
+
+.choose-us {
+  padding: 1em;
+}
+
+.choose-us img {
+  width: 20em;
+  max-height: auto;
+  object-fit: fill;
+  object-position: center;
+}
+
+.footer-bg {
+  background-color: #444;
+}
+
+.footer-container {
+  max-width: 72em;
+  margin: auto;
+  color: #fff;
+  padding: 1em 2em;
+}
+
+.footer-container a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-container a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer-container ul {
+  display: inline-block;
+  margin: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 1em 0;
+}
+
+.footer-container li {
+  padding: 0.4em 0em;
+}
+
+.footer-container address {
+  font-style: normal;
+}
+
+.copyright {
+  border-top: 1px solid #555;
+  padding: 0.2em 0em;
+  color: #888;
+}
+
+.project-requirements {
+  padding: 1em;
+  text-align: center;
+  background: rgba(135, 206, 235, 0.2);
+}
+
+.requirements-form-container {
+  padding: 2em;
+  margin: 2em 1em;
+  border: 1px solid #888;
+  background-color: #efefef;
+  border-radius: 0.5em;
+}
+
+.requirements-form-container legend {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+}
+
+input, textarea, select {
+  padding: 0.6em;
+  border: 1px solid #bfbfc0;
+  border-radius: 0.3em;
+}
+
+input[type="submit"] {
+  padding: 1em;
+  font-weight: 500;
+  background-color: #83C471;
+  border: none;
+  cursor: pointer;
+}
+
+.section-gallery {
+  background-color: rgba(131, 196, 113, 0.1);
+}
+
+.section-gallery h4 {
+  text-align: center;
+  padding: 1em;
+  margin: 0;
+}
+
+.inline-gallery {
+  width: 72em;
+  display: inline;
+}
+
+.inline-gallery img {
+  max-width: 100%;
+  width: 200px;
+  height: auto;
+}
+
+.flexbox-gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flexbox-gallery img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.grid-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  justify-items: center;
+}
+
+.grid-gallery img {
+  max-width: 100%;
+  width: 200px;
+  height: auto;
+}
+
+.table-gallery {
+  width: 72em;
+  border-collapse: collapse;
+}
+
+.table-gallery td {
+  width: 20%;
+}
+
+.table-gallery img {
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
